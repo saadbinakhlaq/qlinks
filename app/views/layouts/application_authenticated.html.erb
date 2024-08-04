@@ -11,13 +11,12 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render "shared/navbar_authenticated" %>
-    <div class="flex h-screen bg-gray-100">
+    <div class="flex h-screen  bg-gradient-to-r from-rose-100 to-white text-slate-600">
       <!-- sidebar -->
       <%= render "shared/sidebar" %>
 
       <!-- Main content -->
-      <div class="flex flex-col flex-1 overflow-y-auto bg-white">
+      <div class="flex flex-col flex-1 overflow-y-auto">
           <%= render 'shared/alerts' %>
           <div class="p-6 mx-auto md:w-full">
             <div class="overflow-hidden">
@@ -25,6 +24,8 @@
             </div>
           </div>
       </div>
+
+      <!-- right sidebar -->
     </div>
   </body>
 </html>

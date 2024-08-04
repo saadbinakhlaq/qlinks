@@ -40,7 +40,7 @@
   }
 
   .alert-danger {
-    @apply bg-red-300 text-red-900 border-red-500;
+    @apply bg-red-300 text-red-900 border-red-500 rounded-lg;
   }
 
   .alert-success {

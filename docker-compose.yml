@@ -20,6 +20,7 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: "password"
+      POSTGRES_USER: "postgres"
     volumes:
       - postgres-data:/var/lib/postgresql/data
   selenium_chrome:
