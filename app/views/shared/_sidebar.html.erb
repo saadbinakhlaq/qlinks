@@ -1,4 +1,4 @@
-<div class="hidden md:flex flex-col w-64 bg-white shadow-2xl rounded-2xl m-2 relative bg-neutral" data-controller="hello">
+<div class="hidden md:flex flex-col w-64 bg-white shadow-2xl rounded-2xl m-2 relative bg-neutral" data-controller="sidebar">
     <div class="mt-10 flex-grow">
         <nav class="flex-1 mt-6">
             <%= link_to feed_path, class: "flex items-center mt-12 px-2 hover:border-l-2 hover:border-zinc-400 border-l-2 border-white" do %>
@@ -11,7 +11,7 @@
             <% end %>
         </nav>
     </div>
-    <div data-hello-target="profileButton" class="absolute bottom-10 left-20 hidden">
+    <div data-sidebar-target="profileButton" class="absolute bottom-10 left-20 hidden">
         <!-- #-- <button class="w-4 absolute top-9 right-3" data-action="click->hello#closePopUp">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -42,22 +42,22 @@
             </li>
         </ul>
     </div>
-    <button data-action="hello#toggle" class="mx-auto w-48 mb-4 px-4 py-2 text-neutral-100 font-medium rounded-full shadow bg-gradient-to-r from-red-400 to-pink-400 hover:from-red-500 hover:to-pink-500">
+    <button data-action="sidebar#toggle" class="mx-auto w-48 mb-4 px-4 py-2 text-neutral-100 font-medium rounded-full shadow bg-gradient-to-r from-red-400 to-pink-400 hover:from-red-500 hover:to-pink-500">
         <%= current_user.email %>
     </button>
 </div>
 <div class="md:hidden w-full mt-4">
-    <nav class="flex items-center justify-between flex-wrap p-6 rounded-lg shadow-xl border mx-2 bg-white" data-controller="hello">
+    <nav class="flex items-center justify-between flex-wrap p-6 rounded-lg shadow-xl border mx-2 bg-white" data-controller="sidebar">
         <div class="flex items-center flex-shrink-0 text-neutral-600 mr-6">
             <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
             <span class="font-semibold text-xl tracking-tight">My Project</span>
         </div>
-        <div class="block" data-action="click->hello#toggle">
+        <div class="block" data-action="click->sidebar#toggle">
             <button class="flex items-center px-3 py-2 border rounded hover:border-gray-400">
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
-        <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" data-hello-target="profileButton">
+        <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" data-sidebar-target="profileButton">
             <div class="text-sm md:flex-grow">
                 <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
                     Docs
